@@ -1,9 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
-import hero from "@/assets/hero.jpg";
+import heroAsset from "@/assets/labarak-1.jpg.asset.json";
+import interiorAsset from "@/assets/labarak-2.jpg.asset.json";
 import sweet from "@/assets/sweet.jpg";
 import savory from "@/assets/savory.jpg";
 import coffee from "@/assets/coffee.jpg";
-import interior from "@/assets/interior.jpg";
+
+const hero = heroAsset.url;
+const interior = interiorAsset.url;
 
 export const Route = createFileRoute("/_site/galerie")({
   head: () => ({
