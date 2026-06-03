@@ -1,9 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Clock, MapPin, Sparkles } from "lucide-react";
-import hero from "@/assets/hero.jpg";
+import heroAsset from "@/assets/labarak-1.jpg.asset.json";
+import secondaryAsset from "@/assets/labarak-2.jpg.asset.json";
 import sweet from "@/assets/sweet.jpg";
 import savory from "@/assets/savory.jpg";
 import coffee from "@/assets/coffee.jpg";
+
+const hero = heroAsset.url;
+const coffeeSmall = secondaryAsset.url;
 
 export const Route = createFileRoute("/_site/")({
   head: () => ({
@@ -66,7 +70,7 @@ function Home() {
               />
             </div>
             <div className="hidden md:block absolute -bottom-8 -left-8 w-44 rounded-2xl overflow-hidden border-4 border-background shadow-xl">
-              <img src={coffee} alt="Café latte" width={400} height={500} loading="lazy" className="h-full w-full object-cover" />
+              <img src={coffeeSmall} alt="Bibliothèque de Labarak" width={400} height={500} loading="lazy" className="h-full w-full object-cover" />
             </div>
             <div className="absolute -top-6 -right-4 rounded-full bg-accent text-accent-foreground font-display font-bold text-sm px-4 py-2 rotate-6 shadow-lg">
               fait maison
