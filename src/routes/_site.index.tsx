@@ -46,12 +46,14 @@ function Home() {
               >
                 Voir le menu <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link
-                to="/contact"
+              <a
+                href="https://www.google.com/maps/place/La+barak/@35.7300101,-0.5858105,17z/data=!3m1!4b1!4m6!3m5!1s0xd7e636349717c83:0x8ef017626e386866!8m2!3d35.7300101!4d-0.5858105!16s%2Fg%2F11hzpytwh9"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 font-semibold hover:border-primary transition"
               >
                 Nous rendre visite
-              </Link>
+              </a>
             </div>
             <div className="mt-10 flex flex-wrap gap-6 text-sm text-muted-foreground">
               <span className="flex items-center gap-2"><MapPin className="h-4 w-4 text-accent" /> Oran, Algérie</span>
