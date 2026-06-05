@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MapPin, Phone, Clock, Mail, Instagram, Facebook } from "lucide-react";
+import { MapPin, Phone, Clock, Instagram, Facebook } from "lucide-react";
 
 export const Route = createFileRoute("/_site/contact")({
   head: () => ({
@@ -28,8 +28,7 @@ function Contact() {
           <ul className="mt-10 space-y-5">
             <Info icon={<MapPin className="h-5 w-5" />} title="Adresse" value="Oran, Algérie" />
             <Info icon={<Clock className="h-5 w-5" />} title="Horaires" value="Tous les jours · 8h – 23h" />
-            <Info icon={<Phone className="h-5 w-5" />} title="Téléphone" value="+213 5XX XX XX XX" />
-            <Info icon={<Mail className="h-5 w-5" />} title="Email" value="contact@labarak.dz" />
+            <Info icon={<Phone className="h-5 w-5" />} title="Téléphone" value="0798 39 75 22" />
           </ul>
 
           <div className="mt-10 flex gap-3">
