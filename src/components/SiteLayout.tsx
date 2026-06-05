@@ -1,5 +1,6 @@
 import { Link, Outlet, useRouterState } from "@tanstack/react-router";
-import { Coffee, Instagram, Facebook, MapPin } from "lucide-react";
+import { Instagram, Facebook, MapPin } from "lucide-react";
+import logoAsset from "@/assets/labarak-logo.png.asset.json";
 import { useState } from "react";
 
 const nav = [
@@ -17,9 +18,9 @@ export function SiteLayout() {
     <div className="min-h-screen flex flex-col">
       <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border/60">
         <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 group" onClick={() => setOpen(false)}>
-            <span className="h-9 w-9 rounded-full bg-[var(--gradient-warm)] grid place-items-center text-primary-foreground">
-              <Coffee className="h-4 w-4" />
+          <Link to="/" className="flex items-center gap-2 group" onClick={() => setOpen(false)} aria-label="Labarak — Accueil">
+            <span className="h-11 w-11 rounded-full bg-[var(--gradient-warm)] grid place-items-center shadow-[var(--shadow-warm)]">
+              <img src={logoAsset.url} alt="Labarak" className="h-8 w-8 object-contain" />
             </span>
             <span className="font-display font-bold text-xl tracking-tight">
               Labarak
@@ -87,8 +88,8 @@ export function SiteLayout() {
         <div className="mx-auto max-w-6xl px-6 py-12 grid gap-8 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <span className="h-9 w-9 rounded-full bg-[var(--gradient-warm)] grid place-items-center text-primary-foreground">
-                <Coffee className="h-4 w-4" />
+              <span className="h-11 w-11 rounded-full bg-[var(--gradient-warm)] grid place-items-center shadow-[var(--shadow-warm)]">
+                <img src={logoAsset.url} alt="Labarak" className="h-8 w-8 object-contain" />
               </span>
               <span className="font-display font-bold text-xl">Labarak</span>
             </div>
