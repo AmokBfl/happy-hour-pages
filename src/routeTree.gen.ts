@@ -13,7 +13,6 @@ import { Route as SiteRouteImport } from './routes/_site'
 import { Route as SiteIndexRouteImport } from './routes/_site.index'
 import { Route as SiteMenuRouteImport } from './routes/_site.menu'
 import { Route as SiteGalerieRouteImport } from './routes/_site.galerie'
-import { Route as SiteContactRouteImport } from './routes/_site.contact'
 
 const SiteRoute = SiteRouteImport.update({
   id: '/_site',
@@ -34,20 +33,13 @@ const SiteGalerieRoute = SiteGalerieRouteImport.update({
   path: '/galerie',
   getParentRoute: () => SiteRoute,
 } as any)
-const SiteContactRoute = SiteContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => SiteRoute,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof SiteIndexRoute
-  '/contact': typeof SiteContactRoute
   '/galerie': typeof SiteGalerieRoute
   '/menu': typeof SiteMenuRoute
 }
 export interface FileRoutesByTo {
-  '/contact': typeof SiteContactRoute
   '/galerie': typeof SiteGalerieRoute
   '/menu': typeof SiteMenuRoute
   '/': typeof SiteIndexRoute
@@ -55,23 +47,16 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_site': typeof SiteRouteWithChildren
-  '/_site/contact': typeof SiteContactRoute
   '/_site/galerie': typeof SiteGalerieRoute
   '/_site/menu': typeof SiteMenuRoute
   '/_site/': typeof SiteIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contact' | '/galerie' | '/menu'
+  fullPaths: '/' | '/galerie' | '/menu'
   fileRoutesByTo: FileRoutesByTo
-  to: '/contact' | '/galerie' | '/menu' | '/'
-  id:
-    | '__root__'
-    | '/_site'
-    | '/_site/contact'
-    | '/_site/galerie'
-    | '/_site/menu'
-    | '/_site/'
+  to: '/galerie' | '/menu' | '/'
+  id: '__root__' | '/_site' | '/_site/galerie' | '/_site/menu' | '/_site/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -108,25 +93,16 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SiteGalerieRouteImport
       parentRoute: typeof SiteRoute
     }
-    '/_site/contact': {
-      id: '/_site/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof SiteContactRouteImport
-      parentRoute: typeof SiteRoute
-    }
   }
 }
 
 interface SiteRouteChildren {
-  SiteContactRoute: typeof SiteContactRoute
   SiteGalerieRoute: typeof SiteGalerieRoute
   SiteMenuRoute: typeof SiteMenuRoute
   SiteIndexRoute: typeof SiteIndexRoute
 }
 
 const SiteRouteChildren: SiteRouteChildren = {
-  SiteContactRoute: SiteContactRoute,
   SiteGalerieRoute: SiteGalerieRoute,
   SiteMenuRoute: SiteMenuRoute,
   SiteIndexRoute: SiteIndexRoute,
@@ -140,3 +116,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
