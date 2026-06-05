@@ -108,10 +108,10 @@ export function SiteLayout() {
           <div>
             <h4 className="font-semibold mb-3">Suivez-nous</h4>
             <div className="flex gap-3">
-              <a href="#" className="h-10 w-10 grid place-items-center rounded-full bg-background border border-border hover:border-primary hover:text-primary transition">
+              <a href="https://www.instagram.com/la_barak_oran/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="h-10 w-10 grid place-items-center rounded-full bg-background border border-border hover:border-primary hover:text-primary transition">
                 <Instagram className="h-4 w-4" />
               </a>
-              <a href="#" className="h-10 w-10 grid place-items-center rounded-full bg-background border border-border hover:border-primary hover:text-primary transition">
+              <a href="https://www.facebook.com/cafelabarak/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="h-10 w-10 grid place-items-center rounded-full bg-background border border-border hover:border-primary hover:text-primary transition">
                 <Facebook className="h-4 w-4" />
               </a>
             </div>
