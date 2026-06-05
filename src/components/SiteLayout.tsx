@@ -19,7 +19,7 @@ export function SiteLayout() {
       <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border/60">
         <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group" onClick={() => setOpen(false)} aria-label="Labarak — Accueil">
-            <span className="h-11 w-11 rounded-full bg-[var(--gradient-warm)] grid place-items-center shadow-[var(--shadow-warm)]">
+            <span className="h-11 w-11 rounded-full grid place-items-center shadow-[var(--shadow-warm)]" style={{ background: "var(--gradient-warm)" }}>
               <img src={logoAsset.url} alt="Labarak" className="h-8 w-8 object-contain" />
             </span>
             <span className="font-display font-bold text-xl tracking-tight">
@@ -88,7 +88,7 @@ export function SiteLayout() {
         <div className="mx-auto max-w-6xl px-6 py-12 grid gap-8 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <span className="h-11 w-11 rounded-full bg-[var(--gradient-warm)] grid place-items-center shadow-[var(--shadow-warm)]">
+              <span className="h-11 w-11 rounded-full grid place-items-center shadow-[var(--shadow-warm)]" style={{ background: "var(--gradient-warm)" }}>
                 <img src={logoAsset.url} alt="Labarak" className="h-8 w-8 object-contain" />
               </span>
               <span className="font-display font-bold text-xl">Labarak</span>
