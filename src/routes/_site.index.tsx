@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Clock, MapPin, Sparkles } from "lucide-react";
+import { ArrowRight, Clock, MapPin, Sparkles, Star } from "lucide-react";
 import heroAsset from "@/assets/labarak-1.jpg.asset.json";
 import secondaryAsset from "@/assets/labarak-2.jpg.asset.json";
 import sweet from "@/assets/sweet.jpg";
@@ -74,9 +74,22 @@ function Home() {
             <div className="hidden md:block absolute -bottom-8 -left-8 w-44 rounded-2xl overflow-hidden border-4 border-background shadow-xl">
               <img src={coffeeSmall} alt="Bibliothèque de Labarak" width={400} height={500} loading="lazy" className="h-full w-full object-cover" />
             </div>
-            <div className="absolute -top-6 -right-4 rounded-full bg-accent text-accent-foreground font-display font-bold text-sm px-4 py-2 rotate-6 shadow-lg">
-              fait maison
-            </div>
+            <a
+              href="https://maps.app.goo.gl/CJsFrfbd2MJGsNZ78"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:flex absolute -top-6 -right-4 items-center gap-2 rounded-full bg-background border border-border px-4 py-2 shadow-lg hover:border-primary transition"
+              aria-label="Note 4,4 sur 5 sur Google Maps"
+            >
+              <span className="flex items-center gap-0.5 text-accent">
+                {[0, 1, 2, 3].map((i) => (
+                  <Star key={i} className="h-4 w-4 fill-current" />
+                ))}
+                <Star className="h-4 w-4 fill-current opacity-50" />
+              </span>
+              <span className="font-display font-bold text-sm">4,4</span>
+              <span className="text-xs text-muted-foreground">sur Google</span>
+            </a>
           </div>
         </div>
       </section>
