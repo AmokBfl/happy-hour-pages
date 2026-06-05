@@ -33,23 +33,28 @@ function Contact() {
           </ul>
 
           <div className="mt-10 flex gap-3">
-            <a href="#" className="h-11 w-11 grid place-items-center rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition">
+            <a href="https://www.instagram.com/la_barak_oran/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="h-11 w-11 grid place-items-center rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition">
               <Instagram className="h-4 w-4" />
             </a>
-            <a href="#" className="h-11 w-11 grid place-items-center rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition">
+            <a href="https://www.facebook.com/cafelabarak/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="h-11 w-11 grid place-items-center rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition">
               <Facebook className="h-4 w-4" />
             </a>
           </div>
         </div>
 
-        <div className="rounded-3xl overflow-hidden border border-border shadow-[var(--shadow-warm)] aspect-square md:aspect-auto md:h-[560px]">
+        <a
+          href="https://maps.app.goo.gl/CJsFrfbd2MJGsNZ78"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block rounded-3xl overflow-hidden border border-border shadow-[var(--shadow-warm)] aspect-square md:aspect-auto md:h-[560px]"
+        >
           <iframe
-            title="Carte Oran"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.75%2C35.65%2C-0.55%2C35.75&layer=mapnik&marker=35.6971%2C-0.6308"
-            className="w-full h-full"
+            title="Carte Labarak Oran"
+            src="https://www.google.com/maps?q=35.7300101,-0.5858105&z=17&output=embed"
+            className="w-full h-full pointer-events-none"
             loading="lazy"
           />
-        </div>
+        </a>
       </div>
     </section>
   );
