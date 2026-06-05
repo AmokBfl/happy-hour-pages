@@ -141,12 +141,12 @@ function Home() {
           <p className="mt-4 opacity-90 max-w-md mx-auto">
             Labarak vous accueille tous les jours à Oran, dans une ambiance cosy et conviviale.
           </p>
-          <Link
-            to="/contact"
+          <a
+            href="#contact"
             className="inline-flex items-center gap-2 mt-8 rounded-full bg-background text-foreground px-6 py-3 font-semibold hover:opacity-90 transition"
           >
             Voir l'adresse <ArrowRight className="h-4 w-4" />
-          </Link>
+          </a>
         </div>
       </section>
     </>
