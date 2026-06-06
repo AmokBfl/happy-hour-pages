@@ -134,7 +134,7 @@ function Home() {
 
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-6 pb-12">
-        <div className="rounded-3xl bg-[var(--gradient-warm)] text-primary-foreground p-10 md:p-16 text-center relative overflow-hidden">
+        <div className="rounded-3xl bg-[var(--gradient-warm)] text-primary-foreground px-10 py-12 md:px-16 md:py-14 text-center relative overflow-hidden">
           <h2 className="font-display text-3xl md:text-5xl font-bold max-w-2xl mx-auto leading-tight">
             Passez nous voir. Le café est déjà prêt.
           </h2>
