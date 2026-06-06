@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Labarak" },
+      { name: "description", content: "Café chaud. Repas faits maison. Gens sympas. C'est tout ce qu'il faut." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Labarak" },
+      { property: "og:description", content: "Café chaud. Repas faits maison. Gens sympas. C'est tout ce qu'il faut." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Labarak" },
+      { name: "twitter:description", content: "Café chaud. Repas faits maison. Gens sympas. C'est tout ce qu'il faut." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/aad3370f-3381-43d5-9047-72b050ef618c/id-preview-74eb1ccf--88d5ebfc-faab-4020-9917-fb856301fa7a.lovable.app-1780751075350.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/aad3370f-3381-43d5-9047-72b050ef618c/id-preview-74eb1ccf--88d5ebfc-faab-4020-9917-fb856301fa7a.lovable.app-1780751075350.png" },
     ],
     links: [
       {
